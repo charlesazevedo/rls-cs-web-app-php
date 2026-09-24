@@ -11,7 +11,7 @@ Este pacote reúne os dados da revisão sistemática da literatura (RSL) descrit
 | Arquivo | O que contém |
 |---|---|
 | [PROTOCOLO.md](PROTOCOLO.md) | Questões de pesquisa, busca, critérios de seleção, fases, avaliação de qualidade, extração e regras de construção do catálogo. |
-| `dados/estudos.csv` | Os estudos incluídos (S01–S23) e o excluído durante a revisão do artigo, com o motivo; dados bibliográficos e DOI, tipo de estudo, se o estudo tem PHP como foco e as ferramentas de detecção usadas. O estudo excluído na Fase 4 da seleção original está apenas em `extracao-original/estudos.csv`. |
+| `dados/estudos.csv` | Os estudos incluídos (S01–S23) e o excluído durante a revisão do artigo, com o motivo; dados bibliográficos e DOI, tipo de publicação (base para o CE5), tipo de estudo, se o estudo tem PHP como foco, linguagens analisadas, ferramentas de detecção efetivamente usadas (lidas nos textos completos), ferramentas citadas (como registradas na planilha) e as QPs para as quais o estudo contribui no artigo. O estudo excluído na Fase 4 da seleção original está apenas em `extracao-original/estudos.csv`. |
 | `dados/avaliacao-qualidade.csv` | Notas dos critérios QA1 a QA4 de cada estudo incluído, nota total (0 a 4) e a justificativa, que aponta as seções e tabelas do estudo e, quando cabe, a nota alternativa considerada. |
 | `dados/code-smells-extraidos.csv` | Cada registro de CS extraído dos estudos, com o grupo de sinônimos, a categoria, se entrou no catálogo, com que nome, a especificidade e a decisão tomada (por exemplo, "fora do catálogo: estudo não é de PHP"). |
 | `dados/catalogo-cs.csv` | O catálogo final: cada CS, sua categoria, especificidade, descrição e os estudos em que aparece. |
@@ -44,8 +44,11 @@ Os links para os PDFs dos estudos foram retirados da planilha exportada, porque 
 
 ## Como citar
 
+Pacote disponível em <https://github.com/charlesazevedo/rls-cs-web-app-php>.
+
+
 Cite o artigo: AZEVEDO JÚNIOR, C.; ANDRADE, W. L. *Uma Revisão Sistemática da Literatura sobre Code Smells em Aplicações Web Baseadas em PHP*. [referência completa a definir após a publicação]
 
 ## Licença
 
-[a definir pelos autores; para dados, a licença CC BY 4.0 é a opção mais comum no Zenodo]
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt-br): você pode copiar, adaptar e redistribuir os dados, inclusive para fins comerciais, desde que cite a fonte. Os trechos transcritos dos estudos analisados, na pasta `extracao-original/` (coluna "Fixamento" e colunas "Texto relevante"), pertencem aos seus autores e não são cobertos pela licença. Detalhes em [LICENSE](LICENSE).
