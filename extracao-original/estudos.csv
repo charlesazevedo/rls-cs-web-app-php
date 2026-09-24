@@ -1,0 +1,26 @@
+#,Título,Ano,Nível de Importância,Lido?,Incluso?,Autores,Publicado em,Tipo de Estudo,Qualis
+1,A blessing in disguise? Assessing the Relationship between Code Smells and Sustainability,2020,3 - Moderadamente relevante,Sim,Sim,G. Catolino,Conferência,Estudo de Caso,A2
+2,A longitudinal exploratory study on code smells in server side web applications,2021,5 - Muito relevante,Sim,Sim,"Narjes Bessghaier, Ali Ouni, Mohamed Wiem Mkaouer",Jornal,Estudo de Caso,A3
+3,An Empirical Study on the Effect of the Order of Applying Software Refactoring,2016,3 - Moderadamente relevante,Sim,Sim,Yahya Khrishe and Mohammad Alshayeb,Conferência,Estudo de Caso,?
+4,Application of AO Algorithm in Recognizing the Optimim Refactoring sequence for examining the effect on maintainability: Na Empirical Study,2021,2 - Pouco relevante,Sim,Sim,Sandhya Tarwani and Anuradha Chug,Conferência,Estudo de Caso,A2
+5,Application of Deep Learning models for Code Smell Prediction,2022,3 - Moderadamente relevante,Sim,Sim,"Sandhya Tarwani, Anuradha Chug",Conferência,Experimento e Modelagem,?
+6,Applying Software Metric Thresholds for Detection of Bad Smells,2017,2 - Pouco relevante,Sim,Sim,"Priscila P. Souza, Kecia A. M. Ferreira, Bruno L. Sousa, Mariza A. S. Bigonha",Conferência,Estudo de Caso,B1
+7,A Proposal of Software Maintainability Model using Code Smell Measurement,2015,3 - Moderadamente relevante,Sim,Sim,"Billy C. Wagey, Bayu Hendradjaya, M. Sukrisno Mardiyanto",Conferência,Estudo de Caso,A3
+8,A Survey-Based Empirical Evaluation of Bad Smells in LabVIEW Systems Models,2021,2 - Pouco relevante,Sim,Sim,"Xin Zhao, Jeff Gray; Taylor Riché",Conferência,Estudo de Caso,A1
+9,A Textual-based Technique for Smell Detection,2016,3 - Moderadamente relevante,Sim,Sim,"Fabio Palomba , Annibale Panichella , Andrea De Lucia , Rocco Oliveto , Andy Zaidman",Conferência,Estudo de Caso,A2
+10,Bad Smells in IEC 61499-based Control Software: Sniffing out Shotgun Surgery,2023,2 - Pouco relevante,Sim,Sim,"Dunja Životin , Lisa Sonnleithner , Alois Zoitl",Conferência,Modelagem e Survey,A2
+11,Causal inference of server- and client-side code smells in web apps evolution,2024,5 - Muito relevante,Sim,Sim,"Américo Rio, Fernando Brito e Abreu, Diana Mendes",Jornal,Estudo de Caso,?
+12,Code smells as system-level indicators of maintainability: An empirical study,2013,3 - Moderadamente relevante,Sim,Sim,"Aiko Yamashitaa , Steve Counsellc",Jornal,Estudo de cado e Experimento,A2
+13,Code Smell Detection Using A Weighted Cockroach Swarm Optimization Algorithm,2023,3 - Moderadamente relevante,Sim,Sim,"Dr. G. Saranya, Dibyajyoti Mishra, Vojjala Srikar, Abhilash C, Saketh Dooda",Conferência,Experimento,?
+14,Code Smell Explorer: Tangible Exploration of Code Smells and Refactorings,2012,2 - Pouco relevante,Sim,Sim,Felix Raab,Conferência,Estudo de cado e Experimento,A3
+15,Code Smells for Multi-language Systems,2019,3 - Moderadamente relevante,Sim,Sim,"Mouna Abidi, Manel Grichi",Conferência,Survey e Estudo de caso,B2
+16,Detection of embedded code smells in dynamic web applications,2012,4 - Relevante,Sim,Sim,"Hung Viet Nguyen, Hoan Anh Nguyen, Tung Thanh Nguyen,Anh Tuan Nguyen, Tien N. Nguyen",,Experimento,A1
+17,Do Research and Practice of Code Smell Identification Walk Together? A Social Representations Analysis,2019,3 - Moderadamente relevante,Sim,Sim,"Rafael de Mello, Anderson Uchôa, Roberto Oliveira, Willian Oizumi, Jairo Souza, Kleyson Mendes, Daniel Oliveira, Baldoino Fonseca, Alessandro Garcia",Conferência,Survey e Estudo de caso,A2
+18,Gender Diversity and Women in Software Teams: How Do They Affect Community Smells?,2019,1 - Nada relevante,Sim,Não,"Gemma Catolino, Fabio Palomba, Damian A. Tamburri, Alexander Serebrenik, Filomena Ferrucci",Conferência,Survey e Estudo de caso,A1
+19,On Experimenting Refactoring Tools to Remove Code Smells,2015,3 - Moderadamente relevante,Sim,Sim,"Francesca Arcelli Fontana, Marco Mangiacavalli, Domenico Pochiero,  Marco Zanoni",Conferência,Experimento,?
+20,On the Diffusion and Impact of Code Smells in Web Applications,2020,5 - Muito relevante,Sim,Sim,"Narjes Bessghaier, Ali Ouni, Mohamed Wiem Mkaouer",Jornal,Estudo de cado e Experimento,A2
+21,On the effects of continuous delivery on code quality: A case study in industry,2022,5 - Muito relevante,Sm,Sim,"Maluane Rubert , Kleinner Farias",Jornal,Estudo de Caso,A1
+22,"PHP code smells in web apps: Evolution, survival and anomalies",2023,5 - Muito relevante,Sim,Sim,"Américo Rio, Fernando Brito e Abreu",Jornal,Experimento e Modelagem,?
+23,Semantic Smells and Errors in Access Control Models: A Case Study in PHP,2013,5 - Muito relevante,Sim,Sim,"François Gauthier, Ettore Merlo",Conferência,Estudo de cado e Experimento,A1
+24,Software Analytics in Practice: A Defect Prediction Model Using Code Smells,2016,5 - Muito relevante,Sim,Sim,"Behjat Soltanifar , Shirin Akbarinasaji , Bora Caglayan , Ayse Basar Bener , Asli Filiz , Bryan M. Kramerk and Ayse Tosun Misirli",Conferência,Experimento,A4
+25,To what extent can maintenance problems be predicted by code smell detection? – An empirical study,2013,3 - Moderadamente relevante,Sim,Sim,"Aiko Yamashita, Leon Moonen",Jornal,Estudo de Caso,A2
