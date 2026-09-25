@@ -1,29 +1,19 @@
-Pacote de replicação: Uma Revisão Sistemática da Literatura sobre Code Smells
-em Aplicações Web Baseadas em PHP
+Replication package: A Systematic Literature Review of Code Smells in
+PHP-Based Web Applications
 
-Copyright (c) 2026 Charles de Azevedo Júnior e Wilkerson L. Andrade
+Copyright (c) 2026 Charles de Azevedo Júnior and Wilkerson L. Andrade
 
-Este pacote está licenciado sob a licença Creative Commons Atribuição 4.0
-Internacional (CC BY 4.0). Você pode copiar, redistribuir, adaptar e usar os
-dados para qualquer fim, inclusive comercial, desde que atribua o crédito aos
-autores, indique a fonte e informe se fez alterações.
+This package is licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0). You may copy, redistribute, adapt, and use
+the data for any purpose, including commercial use, as long as you give
+appropriate credit to the authors, indicate the source, and state whether you
+made changes.
 
-Texto completo da licença: https://creativecommons.org/licenses/by/4.0/legalcode.pt
-Resumo: https://creativecommons.org/licenses/by/4.0/deed.pt-br
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
 
-Exceção: os trechos transcritos dos estudos analisados (coluna "Fixamento" de
-extracao-original/fixamento.csv e colunas "Texto relevante" dos demais arquivos
-de extracao-original/) pertencem aos autores desses estudos e não são cobertos
-por esta licença. Eles são reproduzidos como citações, com indicação da fonte,
-apenas para documentar a extração de dados.
-
--------------------------------------------------------------------------------
-
-This replication package is licensed under the Creative Commons Attribution
-4.0 International License (CC BY 4.0):
-https://creativecommons.org/licenses/by/4.0/
-
-Exception: excerpts quoted from the analysed studies (column "Fixamento" in
-extracao-original/fixamento.csv and the "Texto relevante" columns in the other
-extracao-original/ files) belong to the authors of those studies and are not
-covered by this license.
+Exception: the excerpts quoted from the analyzed studies (column "Fixamento"
+of original-extraction/excerpts.csv and the "Texto relevante" columns of the
+other files in original-extraction/) belong to the authors of those studies
+and are not covered by this license. They are reproduced as quotations, with
+their sources, only to document the data extraction.

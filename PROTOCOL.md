@@ -1,0 +1,72 @@
+# Review protocol
+
+The review followed the guidelines of Kitchenham (2004) and Kitchenham and Charters (2007).
+
+## Objective and research questions
+
+To identify studies that address code smells and code smell detection tools in web applications developed in PHP, in order to compile a list of the code smells reported in these studies, a catalog of detection tools, and the strategies used to mitigate and prevent these problems.
+
+- **RQ1:** What are the most common code smells in PHP projects?
+- **RQ2:** How do code smells affect the maintainability and evolution of PHP applications?
+- **RQ3:** What are the most used tools for detecting code smells in PHP?
+- **RQ4:** What are the best practices to mitigate and prevent code smells in PHP projects?
+
+## Search
+
+- **Databases:** IEEE Xplore, ACM Digital Library, ScienceDirect, and SpringerLink.
+- **Search string:** `php AND (code smells OR semantic smells OR bad smells)`, applied in the same way to the four databases, without quotation marks around compound terms.
+- **Fields:** title, abstract, and keywords.
+- **Period:** the search was run at the beginning of the SLR, which was conducted between August and December 2024. The exact date of execution in each database was not recorded.
+- **Results per database:** ACM 380, IEEE Xplore 363, ScienceDirect 171, SpringerLink 141 (1,055 in total).
+
+## Selection criteria
+
+- **IC:** studies that contain code smells in PHP or that report the maintainability of software with respect to code smells.
+- **EC1:** is a book or an entire collection of proceedings.
+- **EC2:** published before 2012.
+- **EC3:** incomplete, unavailable, or duplicate study (identical or updated version; the most recent one is kept).
+- **EC4:** not written in Portuguese or English.
+- **EC5:** is an abstract, extended abstract, poster, or SLR.
+- **EC6:** does not define *code smells*, *semantic smells*, or *bad smells*.
+
+EC5 was revised during the preparation of the paper. In the original version of the protocol, it excluded "short papers" without defining the term. To make it verifiable without redoing the selection, it was changed to exclude only abstracts, extended abstracts, and posters. When the full texts were reread, a previously included study (Raab, 2012) turned out to be a poster and was excluded.
+
+## Selection phases
+
+| Phase | Activity | Studies assessed | Excluded |
+|---|---|---|---|
+| 1 | Application of criteria EC1 to EC5 | 1,055 | 351 |
+| 2 | Reading of titles and keywords (EC6) | 704 | 641 |
+| 3 | Reading of abstracts and conclusions (IC) | 63 | 38 |
+| 4 | Full-text reading | 25 | 2 |
+| 5 | Cases of doubt decided by the expert | 23 | 0 |
+
+The result is **23 included studies**. Phases 1 to 4 were conducted by the first author, and all decisions were reviewed by the second author, who also acted as the expert in Phase 5. Disagreements were resolved by consensus, without computing inter-rater agreement. Of the 2 exclusions in Phase 4, one happened in the original selection and the other (Raab, 2012) during the revision of the paper.
+
+## Quality assessment
+
+Each included study was assessed against four criteria, scored 1 (met), 0.5 (partially met), or 0 (not met); the score of the study is the sum, from 0 to 4:
+
+- **QA1:** Is the objective of the study clearly defined?
+- **QA2:** Is the research method, including data collection and analysis, described?
+- **QA3:** Is the context of the study (systems, languages, and data analyzed) described?
+- **QA4:** Do the results answer the objective, and are they supported by the data presented?
+
+The assessment was not used as an exclusion criterion but to weigh the confidence in the evidence. It was carried out after selection and extraction, during the revision of the paper, with a full reading of each study. The scores and justifications are in `data/quality-assessment.csv`.
+
+## Extraction
+
+For each study, the spreadsheet records title, year, authors, venue, study type, Qualis rating (the Brazilian CAPES classification of venues), and level of relevance to the SLR; relevant excerpts from the text (*Fixamento* sheet); the code smells reported, with a description and an indication of their relation to PHP; the detection and refactoring tools and techniques mentioned; and the evidence associated with each research question. The extraction was carried out in Portuguese; see the README for the correspondence between the spreadsheet and the files of this package.
+
+## Building the code smell catalog
+
+1. **Scope:** the catalog includes the code smells reported in the studies that focus on PHP (column `php_focus` of `data/studies.csv`).
+2. **Synonyms:** records that describe the same code smell under different names are unified (for example, *High Method Complexity* and *Cyclomatic Complexity*). The group of each record is in the column `synonym_group` of `data/extracted-code-smells.csv`.
+3. **Client side:** the catalog includes JavaScript and CSS code smells embedded in the HTML generated by the server; rules that apply only to standalone JavaScript (such as those of ESLint) and problems exclusive to JavaScript are left out.
+4. **Studies with more than one project:** only the code smells measured in the PHP project are included (the case of Soltanifar et al., 2016).
+5. **Categories:** PHP and web applications, size, complexity, inheritance and coupling, duplication, unused code, exceptions, documentation, and style. Documentation and style violations are kept, in their own categories.
+6. **Specificity:** each code smell is classified as G (generic), W (web), or P (tied to PHP), as described in the [README](README.md).
+
+## Tool count (RQ3)
+
+The frequency of use considers only market tools, counted once per PHP study. Prototypes created by the authors of a study (such as WebScent) and custom approaches without a detection tool are not counted.

@@ -1,0 +1,39 @@
+n,name,category,specificity,description,study_ids,study_keys
+1,Development Code Fragment,PHP and web applications,P,"Fragments used only during development, such as var_dump() and print_r(), left behind in the code.",S20; S23,rio_abreu_2023; rio_causal_2024
+2,Goto Statement,PHP and web applications,G,"Use of the goto statement, which makes the program flow hard to follow.",S13; S15,bessghaier_diffusion_2020; bessghaier_longitudinal_2021
+3,Implicitly Granted Privileges,PHP and web applications,W,"A privilege implicitly granted along with another: routines protected by one privilege perform operations that would require another, without checking it.",S02,gauthier_merlo_2013
+4,Semantically Related Privileges,PHP and web applications,W,"Privileges with the same semantics duplicated for each component of the system, which couples privileges to components.",S02,gauthier_merlo_2013
+5,Embedded/Inline JavaScript,PHP and web applications,W,"JavaScript in the generated HTML, in <script> tags or in element attributes, mixing logic and presentation.",S01; S23,nguyen_2012; rio_causal_2024
+6,Embedded/Inline CSS,PHP and web applications,W,"CSS in the generated HTML, in <style> tags or in the style attribute, instead of separate style sheets.",S01; S23,nguyen_2012; rio_causal_2024
+7,CSS in JavaScript,PHP and web applications,W,"Style properties defined in JavaScript code, including through jQuery.",S01; S23,nguyen_2012; rio_causal_2024
+8,Scattered Sources,PHP and web applications,W,Related fragments of client-side code spread across different functions of the server-side code.,S01,nguyen_2012
+9,Duplicate JS,PHP and web applications,W,Repeated JavaScript fragments embedded in the server-side code.,S01,nguyen_2012
+10,HTML Syntax Error,PHP and web applications,W,"Generated HTML that does not conform to the language specification, such as unclosed tags.",S01,nguyen_2012
+11,Excessive Class Length,Size,G,"Class with too much code (e.g., more than 1,000 lines), which indicates too many responsibilities.",S13; S15; S20; S23,bessghaier_diffusion_2020; bessghaier_longitudinal_2021; rio_abreu_2023; rio_causal_2024
+12,Excessive Method Length,Size,G,"Method that is too long (e.g., more than 100 lines), hard to understand and maintain.",S13; S15; S20; S23,bessghaier_diffusion_2020; bessghaier_longitudinal_2021; rio_abreu_2023; rio_causal_2024
+13,Excessive Parameter List,Size,G,"Method with too many parameters (e.g., more than 10), a sign that it accumulates tasks.",S13; S15; S20; S23,bessghaier_diffusion_2020; bessghaier_longitudinal_2021; rio_abreu_2023; rio_causal_2024
+14,Too Many Methods,Size,G,"Class with too many methods (e.g., more than 25), which indicates low cohesion.",S13; S15; S20; S23,bessghaier_diffusion_2020; bessghaier_longitudinal_2021; rio_abreu_2023; rio_causal_2024
+15,Too Many Public Methods,Size,G,"Class with too many public methods (e.g., more than 10), exposing too much functionality.",S13; S15; S20; S23,bessghaier_diffusion_2020; bessghaier_longitudinal_2021; rio_abreu_2023; rio_causal_2024
+16,Too Many Fields,Size,G,"Class with too many fields (e.g., more than 15).",S20; S23,rio_abreu_2023; rio_causal_2024
+17,Excessive Public Count,Size,G,"Class with too many public methods and attributes combined (e.g., more than 45).",S20; S23,rio_abreu_2023; rio_causal_2024
+18,Cyclomatic Complexity,Complexity,G,"Too many decision points in a method (e.g., complexity above 10).",S13; S15; S18; S20; S23,bessghaier_diffusion_2020; bessghaier_longitudinal_2021; rubert_farias_2022; rio_abreu_2023; rio_causal_2024
+19,NPath Complexity,Complexity,G,"Too many acyclic execution paths in a method (e.g., more than 200).",S13; S15; S20; S23,bessghaier_diffusion_2020; bessghaier_longitudinal_2021; rio_abreu_2023; rio_causal_2024
+20,Excessive Class Complexity,Complexity,G,"Excessive sum of the complexities of the methods of a class (e.g., above 50).",S20; S23,rio_abreu_2023; rio_causal_2024
+21,Coupling Between Objects,Inheritance and coupling,G,"Class with too many dependencies (e.g., more than 13), which propagates the effect of changes.",S13; S15; S20; S23,bessghaier_diffusion_2020; bessghaier_longitudinal_2021; rio_abreu_2023; rio_causal_2024
+22,Depth of Inheritance,Inheritance and coupling,G,"Inheritance hierarchy that is too deep (e.g., more than 6 levels).",S13; S15; S20; S23,bessghaier_diffusion_2020; bessghaier_longitudinal_2021; rio_abreu_2023; rio_causal_2024
+23,Number of Children,Inheritance and coupling,G,"Class with too many subclasses (e.g., more than 15).",S13; S15; S20; S23,bessghaier_diffusion_2020; bessghaier_longitudinal_2021; rio_abreu_2023; rio_causal_2024
+24,Duplicate Code,Duplication,G,Repeated code fragments in different parts of the system.,S18,rubert_farias_2022
+25,Unused Private Field,Unused code,G,Private field that is never used.,S20; S23,rio_abreu_2023; rio_causal_2024
+26,Unused Private Method,Unused code,G,Private method that is never called.,S20; S23,rio_abreu_2023; rio_causal_2024
+27,Unused Local Variable,Unused code,G,Local variable that is declared and never used.,S20; S23,rio_abreu_2023; rio_causal_2024
+28,Unused Formal Parameter,Unused code,G,Method parameter that is never used in the method body.,S20; S23,rio_abreu_2023; rio_causal_2024
+29,Empty Catch Block,Exceptions,G,"Empty catch block, which ignores the caught exception.",S13; S15,bessghaier_diffusion_2020; bessghaier_longitudinal_2021
+30,Missing Function Comments,Documentation,P,Functions without documentation comments.,S09,soltanifar_2016
+31,Missing @Return Tag in Comments,Documentation,P,Function comments without the description of the return value (@return).,S09,soltanifar_2016
+32,Poorly Grouped Parameter Tags,Documentation,P,Parameter tags poorly grouped in documentation comments.,S09,soltanifar_2016
+33,Comment Style (/**),Documentation,P,Comments that do not follow the required documentation style (/**).,S09,soltanifar_2016
+34,Missing Parameter Name,Documentation,P,@param tag without the parameter name in documentation comments.,S09,soltanifar_2016
+35,Brace Placement Rules,Style,P,"Braces placed outside the coding standard, such as an opening brace that should be on a new line.",S09,soltanifar_2016
+36,Incorrect Spacing After Commas,Style,P,Missing space after commas.,S09,soltanifar_2016
+37,Functions Parentheses on Multiple Lines,Style,P,Improper use of parentheses in multi-line function calls.,S09,soltanifar_2016
+38,Blank Line Before Tags,Style,P,Incorrect number of blank lines before the tags in documentation comments.,S09,soltanifar_2016

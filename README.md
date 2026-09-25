@@ -1,54 +1,66 @@
-# Pacote de replicação: Uma Revisão Sistemática da Literatura sobre Code Smells em Aplicações Web Baseadas em PHP
+# Replication package: A Systematic Literature Review of Code Smells in PHP-Based Web Applications
 
-Charles de Azevedo Júnior e Wilkerson L. Andrade, Universidade Federal de Campina Grande (UFCG).
+Charles de Azevedo Júnior and Wilkerson L. Andrade, Federal University of Campina Grande (UFCG), Brazil.
 
-Este pacote reúne os dados da revisão sistemática da literatura (RSL) descrita no artigo: os estudos selecionados, os *code smells* (CS) extraídos de cada um, o catálogo final de CS, a avaliação de qualidade dos estudos e a planilha de extração original. O protocolo completo está em [PROTOCOLO.md](PROTOCOLO.md).
+This package contains the data of the systematic literature review (SLR) described in the paper: the selected studies, the code smells extracted from each one, the final code smell catalog, the quality assessment of the studies, and the original data-extraction spreadsheet. The full protocol is in [PROTOCOL.md](PROTOCOL.md). All files are UTF-8 CSV.
 
-*English summary: replication package for a systematic literature review on code smells in PHP web applications. It contains the selected studies, every code smell extracted from them with the grouping decisions, the final catalog, the quality assessment of each study and the original data-extraction spreadsheet. All files are UTF-8 CSV; texts are in Brazilian Portuguese.*
+## Contents
 
-## Conteúdo
-
-| Arquivo | O que contém |
+| File | What it contains |
 |---|---|
-| [PROTOCOLO.md](PROTOCOLO.md) | Questões de pesquisa, busca, critérios de seleção, fases, avaliação de qualidade, extração e regras de construção do catálogo. |
-| `dados/estudos.csv` | Os estudos incluídos (S01–S23) e o excluído durante a revisão do artigo, com o motivo; dados bibliográficos e DOI, tipo de publicação (base para o CE5), tipo de estudo, se o estudo tem PHP como foco, linguagens analisadas, ferramentas de detecção efetivamente usadas (lidas nos textos completos), ferramentas citadas (como registradas na planilha) e as QPs para as quais o estudo contribui no artigo. O estudo excluído na Fase 4 da seleção original está apenas em `extracao-original/estudos.csv`. |
-| `dados/avaliacao-qualidade.csv` | Notas dos critérios QA1 a QA4 de cada estudo incluído, nota total (0 a 4) e a justificativa, que aponta as seções e tabelas do estudo e, quando cabe, a nota alternativa considerada. |
-| `dados/code-smells-extraidos.csv` | Cada registro de CS extraído dos estudos, com o grupo de sinônimos, a categoria, se entrou no catálogo, com que nome, a especificidade e a decisão tomada (por exemplo, "fora do catálogo: estudo não é de PHP"). |
-| `dados/catalogo-cs.csv` | O catálogo final: cada CS, sua categoria, especificidade, descrição e os estudos em que aparece. |
-| `extracao-original/*.csv` | As abas da planilha de extração, exportadas sem alterações de conteúdo. |
+| [PROTOCOL.md](PROTOCOL.md) | Research questions, search, selection criteria, phases, quality assessment, extraction, and the rules used to build the catalog. |
+| `data/studies.csv` | The included studies (S01–S23) and the study excluded during the revision of the paper, with the reason; bibliographic data and DOI, publication type (the basis for EC5), study type, whether the study focuses on PHP, languages analyzed, detection tools actually used (read in the full texts), tools cited (as recorded in the spreadsheet), and the research questions (RQs) the study contributes to in the paper. The study excluded in Phase 4 of the original selection is only in `original-extraction/studies.csv`. |
+| `data/quality-assessment.csv` | Scores of criteria QA1 to QA4 for each included study, total score (0 to 4), and the justification, which points to the sections and tables of the study and, where applicable, the alternative score considered. |
+| `data/extracted-code-smells.csv` | Every code smell record extracted from the studies, with its synonym group, category, whether it entered the catalog and under which name, its specificity, and the decision taken (for example, "outside the catalog: not a PHP study"). |
+| `data/catalog.csv` | The final catalog: each code smell, its category, specificity, description, and the studies in which it appears. |
+| `original-extraction/*.csv` | The sheets of the data-extraction spreadsheet, exported without changes to their content (in Portuguese; see below). |
 
-As colunas `estudo_id` e `id` ligam os arquivos entre si; a coluna `chave` corresponde às chaves das referências no artigo.
+The columns `study_id` and `id` link the files; the column `key` matches the reference keys used in the paper.
 
-## Especificidade dos CS
+## Code smell specificity
 
-A coluna `especificidade` do catálogo indica a relação de cada CS com o PHP:
+The `specificity` column of the catalog indicates how each code smell relates to PHP:
 
-- **G** (genérico): existe em qualquer linguagem orientada a objetos.
-- **W** (web): próprio de aplicações que geram HTML no servidor, qualquer que seja a linguagem.
-- **P** (PHP): depende de funções ou de convenções do ecossistema PHP, como o PHPDoc e os padrões de codificação verificados pelo PHP_CodeSniffer.
+- **G** (generic): exists in any object-oriented language.
+- **W** (web): specific to applications that generate HTML on the server, whatever the language.
+- **P** (PHP): depends on functions or conventions of the PHP ecosystem, such as PHPDoc and the coding standards checked by PHP_CodeSniffer.
 
-O catálogo reúne os CS *relatados em estudos sobre PHP*, e não apenas CS exclusivos da linguagem.
+The catalog gathers the code smells *reported in studies on PHP*, not only code smells exclusive to the language.
 
-## Diferenças em relação à planilha de extração original
+## The original extraction spreadsheet
 
-A pasta `extracao-original/` reproduz a planilha como foi preenchida durante a RSL. A revisão do artigo, com a releitura dos textos completos, corrigiu alguns pontos. As correções estão em `dados/` e não na planilha:
+The data extraction was carried out in Portuguese. The folder `original-extraction/` reproduces the spreadsheet as it was filled in during the SLR, including its Portuguese column names and texts; the files in `data/` are the curated English version. Each file comes from one sheet:
 
-- **Soltanifar et al. (2016)** analisaram dois projetos: um em Java, com o PMD, e outro em PHP e JavaScript, com o PHP_CodeSniffer e o JSHint. A planilha marca como PHP os 20 CS do estudo, mas só os do projeto PHP entram no catálogo; dois CS desse projeto que não constavam da planilha foram acrescentados a partir do artigo original.
-- **Raab (2012)** é um pôster (trilha *Poster and Demos* do VL/HCC) e foi excluído pelo critério CE5. Ele aparece em `dados/estudos.csv` como excluído.
-- **Nguyen et al. (2012)** passou a contar como estudo de PHP: analisa aplicações web PHP, embora a planilha marque seus CS como não específicos.
-- **Bessghaier et al. (2020)** foi publicado em anais de conferência (LNCS 12409), e não em periódico.
-- Na aba *Fixamento*, os dois trechos atribuídos a Saranya et al. (2023) descrevem, na verdade, o CodeSmellExplorer de Raab (2012).
-- A coluna *CS Específico do PHP* da planilha significa, na prática, "relatado em estudo de PHP". Em `dados/code-smells-extraidos.csv` ela aparece como `marcado_como_php_na_extracao`, e a classificação usada no artigo está em `especificidade`.
+| File | Sheet | Columns (Portuguese → English) |
+|---|---|---|
+| `studies.csv` | Estudos | Título (title), Ano (year), Nível de Importância (relevance level), Lido? (read?), Incluso? (included?), Autores (authors), Publicado em (published in), Tipo de Estudo (study type), Qualis (Brazilian CAPES venue rating) |
+| `excerpts.csv` | Fixamento | Fixamento (excerpt quoted from the study), Artigo (paper), Comentário (extractor's comment) |
+| `code-smells.csv` | Code Smells | Nome do Code Smell (code smell name), CS Específico do PHP (PHP-specific code smell), Descrição (description), Artigo citado (source paper), Texto relevante (relevant excerpt) |
+| `tools.csv` | Ferramentas | Nome da ferramenta (tool name), Para PHP (for PHP), Descrição (description), Artigo citado (source paper), Texto relevante (relevant excerpt) |
+| `techniques.csv` | Técnicas | Técnica (technique), Descrição (description), Artigo citado (source paper), Texto relevante (relevant excerpt) |
+| `rq2.csv` | Q2 | Impáctos do Code Smell (impacts of the code smell), Artigo citado (source paper), Texto relevante (relevant excerpt) |
 
-Os links para os PDFs dos estudos foram retirados da planilha exportada, porque os artigos têm direitos autorais. Use os DOIs de `dados/estudos.csv`.
+In `data/extracted-code-smells.csv`, the column `name_in_study` gives the name used by the study: where the spreadsheet recorded a name in Portuguese, it was replaced by the study's own name (for example, *Scattered Sources* for "Fontes dispersas", from Nguyen et al., 2012). The `row_in_original_spreadsheet` column points to the corresponding row of `original-extraction/code-smells.csv`.
 
-## Como citar
+## Differences from the original extraction spreadsheet
 
-Pacote disponível em <https://github.com/charlesazevedo/rls-cs-web-app-php>.
+The revision of the paper, with the rereading of the full texts, corrected some points. The corrections are in `data/`, not in the spreadsheet:
 
+- **Soltanifar et al. (2016)** analyzed two projects: one in Java, with PMD, and another in PHP and JavaScript, with PHP_CodeSniffer and JSHint. The spreadsheet marks all 20 code smells of the study as PHP, but only those of the PHP project enter the catalog; two code smells of that project that were missing from the spreadsheet were added from the original paper.
+- **Raab (2012)** is a poster (*Poster and Demos* track of VL/HCC) and was excluded by criterion EC5. It appears in `data/studies.csv` as excluded.
+- **Nguyen et al. (2012)** now counts as a PHP study: it analyzes PHP web applications, although the spreadsheet marks its code smells as not specific.
+- **Bessghaier et al. (2020)** was published in conference proceedings (LNCS 12409), not in a journal.
+- In the *Fixamento* sheet, the two excerpts attributed to Saranya et al. (2023) actually describe Raab's (2012) CodeSmellExplorer.
+- The spreadsheet column *CS Específico do PHP* means, in practice, "reported in a PHP study". In `data/extracted-code-smells.csv` it appears as `marked_as_php_in_extraction`, and the classification used in the paper is in `specificity`.
 
-Cite o artigo: AZEVEDO JÚNIOR, C.; ANDRADE, W. L. *Uma Revisão Sistemática da Literatura sobre Code Smells em Aplicações Web Baseadas em PHP*. [referência completa a definir após a publicação]
+The links to the PDFs of the studies were removed from the exported spreadsheet, because the papers are copyrighted. Use the DOIs in `data/studies.csv`.
 
-## Licença
+## How to cite
 
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt-br): você pode copiar, adaptar e redistribuir os dados, inclusive para fins comerciais, desde que cite a fonte. Os trechos transcritos dos estudos analisados, na pasta `extracao-original/` (coluna "Fixamento" e colunas "Texto relevante"), pertencem aos seus autores e não são cobertos pela licença. Detalhes em [LICENSE](LICENSE).
+Package available at <https://github.com/charlesazevedo/rls-cs-web-app-php>.
+
+Cite the paper: AZEVEDO JÚNIOR, C.; ANDRADE, W. L. *A Systematic Literature Review of Code Smells in PHP-Based Web Applications*. [full reference to be added after publication]
+
+## License
+
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): you may copy, adapt, and redistribute the data, including for commercial purposes, as long as you credit the source. The excerpts quoted from the analyzed studies, in the folder `original-extraction/` (column "Fixamento" and the "Texto relevante" columns), belong to their authors and are not covered by the license. Details in [LICENSE](LICENSE).
